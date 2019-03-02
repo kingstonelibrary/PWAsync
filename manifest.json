@@ -2,7 +2,7 @@
   "name": "SW Push Notification",
   "short_name": "SW Push Notification",
   "icons": [{
-    "src": "./images/image.jpg",
+    "src": "./images/image.png",
     "sizes": "192x192",
     "type": "image/jpg"
   }],
