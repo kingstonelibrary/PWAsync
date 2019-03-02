@@ -14,7 +14,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('sync', (event) => {
     console.info('sync', event);
-    var keyValue = 'A1';
+    var keyValue = 'sync-test';
 
     var openReq = indexedDB.open(dbName);
     
