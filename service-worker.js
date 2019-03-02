@@ -1,5 +1,9 @@
 'use strict';
 
+var dbName = 'PWADB';
+// var dbVersion = '1.0.0'
+var storeName  = 'PWAdata';
+
 self.addEventListener('install', (event) => {
     console.info('install', event);
 });
