@@ -1,12 +1,13 @@
+var dbName = 'PWADB';
+// var dbVersion = '1.0.0'
+var storeName  = 'PWAdata';
+var data = {id : 'sync-test', name : 'testData'};
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js');
     navigator.serviceWorker.ready
              .then((registration) => {
                 document.getElementById('button').addEventListener('click', () => {
-                    var dbName = 'PWADB';
-                    // var dbVersion = '1.0.0'
-                    var storeName  = 'PWAdata';
-                    var data = {id : 'sync-test', name : 'testData'};
 
                     var openReq  = indexedDB.open(dbName);   //　DB名を指定して接続。DBがなければ新規作成される。
 
@@ -33,11 +34,11 @@ if ('serviceWorker' in navigator) {
                     console.log('db open error');
                     }
 
-                    registration.sync.register('sync-test')            // 引数にはタグ名を設定（このタグ名を IndexedDB に保存するキーとかにしておくといい）    
-                        .then(() => {
-                            console.log('sync registerd');
-                        })
-                        .catch(console.error.bind(console));
+                    // registration.sync.register('sync-test')            // 引数にはタグ名を設定（このタグ名を IndexedDB に保存するキーとかにしておくといい）    
+                    //     .then(() => {
+                    //         console.log('sync registerd');
+                    //     })
+                    //     .catch(console.error.bind(console));
                  }, false);
              })
              .catch(console.error.bind(console));
