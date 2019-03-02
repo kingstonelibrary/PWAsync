@@ -34,11 +34,11 @@ if ('serviceWorker' in navigator) {
                     console.log('db open error');
                     }
 
-                    // registration.sync.register('sync-test')            // 引数にはタグ名を設定（このタグ名を IndexedDB に保存するキーとかにしておくといい）    
-                    //     .then(() => {
-                    //         console.log('sync registerd');
-                    //     })
-                    //     .catch(console.error.bind(console));
+                    registration.sync.register('sync-test')            // 引数にはタグ名を設定（このタグ名を IndexedDB に保存するキーとかにしておくといい）    
+                        .then(() => {
+                            console.log('sync registerd');
+                        })
+                        .catch(console.error.bind(console));
                  }, false);
              })
              .catch(console.error.bind(console));
