@@ -4,11 +4,11 @@ if ('serviceWorker' in navigator) {
              .then((registration) => {
                 document.getElementById('button').addEventListener('click', () => {
                     var dbName = 'PWADB';
-                    var dbVersion = '1.0.0'
+                    // var dbVersion = '1.0.0'
                     var storeName  = 'PWAdata';
                     var data = {id : 'sync-test', name : 'testData'};
 
-                    var openReq  = indexedDB.open(dbName, dbVersion);   //　DB名を指定して接続。DBがなければ新規作成される。
+                    var openReq  = indexedDB.open(dbName);   //　DB名を指定して接続。DBがなければ新規作成される。
 
                     openReq.onupgradeneeded = function(event){          //onupgradeneededは、DBのバージョン更新(DBの新規作成も含む)時のみ実行
                         console.log('db upgrade');                      // オブジェクトストア(TABLE)の作成、削除はDBの更新時に実行されるonupgradeneededの中でしかできない。
