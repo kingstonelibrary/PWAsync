@@ -55,6 +55,7 @@ if ('serviceWorker' in navigator) {
         var getReq = store.get(keyValue);
     
         getReq.onsuccess = function(event){
+            alert(event.target.result)
             area.innerHTML = event.target.result; // {id : 'A1', name : 'test'}
         }
         }
