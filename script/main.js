@@ -41,6 +41,23 @@ if ('serviceWorker' in navigator) {
                         .catch(console.error.bind(console));
                  }, false);
              })
-             .catch(console.error.bind(console));
+             .catch(console.error.bind(console));                       // ここまでがデータ登録
+
+    let getBtn = document.getElementById('retrieve');
+    let area = document.getElementsByClassName('res');
+    getBtn.addEventListener('click',function(){
+        var keyValue = data.id;
+        var openReq = indexedDB.open(dbName);
+        openReq.onsuccess = function(event){
+        var db = event.target.result;
+        var trans = db.transaction(storeName, 'readonly');
+        var store = trans.objectStore(storeName);
+        var getReq = store.get(keyValue);
+    
+        getReq.onsuccess = function(event){
+            area.innerHTML = event.target.result; // {id : 'A1', name : 'test'}
+        }
+        }
+    })
 }
 
