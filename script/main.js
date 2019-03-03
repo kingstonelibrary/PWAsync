@@ -56,7 +56,7 @@ if ('serviceWorker' in navigator) {
     
         getReq.onsuccess = function(event){
             alert(event.target.result)
-            area.innerHTML = event.target.result; // {id : 'A1', name : 'test'}
+            area.innerHTML = "id:" + event.target.result.id + "&name:" +  event.target.result.name; // {id : 'A1', name : 'test'}
         }
         }
     })
