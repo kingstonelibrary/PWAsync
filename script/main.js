@@ -55,8 +55,8 @@ if ('serviceWorker' in navigator) {
         var getReq = store.get(keyValue);
     
         getReq.onsuccess = function(event){
-            alert("id:" + event.target.result.id + "&name:" +  event.target.result.name)
-            area.innerHTML = "id:" + event.target.result.id + "&name:" +  event.target.result.name; // {id : 'A1', name : 'test'}
+            // alert("id:" + event.target.result.id + "&name:" +  event.target.result.name)
+            area[0].innerHTML = "id:" + event.target.result.id + "&name:" +  event.target.result.name; // {id : 'A1', name : 'test'}
         }
         }
     })
