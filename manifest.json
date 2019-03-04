@@ -1,11 +1,11 @@
 {
-  "name": "SW Push Notification",
-  "short_name": "SW Push Notification",
+  "name": "SW SSync",
+  "short_name": "SW Syn",
   "icons": [{
-    "src": "./images/image.png",
-    "sizes": "192x192",
-    "type": "image/jpg"
-  }],
+        "src": "images/logo192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }],
   "start_url": "./index.html",
   "display": "standalone",
   "gcm_sender_id": "961587936477"
